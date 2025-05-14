@@ -1,5 +1,8 @@
 '''
-Given x(n)=[1,3,−2,4] y(n)=[2,3,−1,3] z(n)=[2,−1,4,−2] 
+Given 
+x(n)=[1,3,−2,4] 
+y(n)=[2,3,−1,3] 
+z(n)=[2,−1,4,−2] 
 Find the correlation between x(n) & y(n) and y(n) & z(n). ⟹ observe the 
 realization.
 '''
