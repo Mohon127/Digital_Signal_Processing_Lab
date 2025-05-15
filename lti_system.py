@@ -1,3 +1,9 @@
+'''
+The impulse response of a discrete-time LTI system is h(n)={u(n)−u(n−5)}. 
+Determine the output of the system for the input x[n]=u(n), using the convolution 
+sum. 
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -10,17 +16,17 @@ def x(n):
 def h(n):
     return unit_step(n) - unit_step(n-5)
 
-n = np.arange(-4, 15)
-h1 = unit_step(n) - unit_step(n-5)
-x1 = unit_step(n)
+n = np.arange(0, 15)
+h = unit_step(n) - unit_step(n-5)
+x = unit_step(n)
 
 plt.subplot(3,1,1)
-plt.stem(n, x1, label = 'unit step input', linefmt='b-', basefmt= ' ')
+plt.stem(n, x, label = 'unit step input', linefmt='b-', basefmt= ' ')
 plt.legend()
 plt.grid(True)
 
 plt.subplot(3,1,2)
-plt.stem(n, h1, label = 'unit impulse response', linefmt='g-', basefmt= ' ')
+plt.stem(n, h, label = 'unit impulse response', linefmt='g-', basefmt= ' ')
 plt.legend()
 plt.grid(True)
 
@@ -31,7 +37,7 @@ for i in range(len(n)):
     sum = 0
     for k in range(len(n)):
         if i-k >= 0:
-            sum += x(k) * h(i-k)
+            sum += x[k] * h[i-k]
     y[i] = sum
 
 
