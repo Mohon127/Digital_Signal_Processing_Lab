@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def ploting(x, y, title, labeling , sub):
+def ploting(x, y,  title, labeling , sub):
     plt.subplot(3,2,sub)
     plt.title(title)
     plt.stem(x, y, label = labeling)
@@ -16,6 +16,8 @@ def ploting(x, y, title, labeling , sub):
     plt.xlabel('time axis')
     plt.ylabel('amplitude')
     plt.grid(True)
+    plt.xticks(x)
+    
     
     
     
@@ -45,5 +47,8 @@ plt.tight_layout()
 plt.show()
 
 
-
+'''
+For access the documentaion of builtin functions, you can use the following command:
+    > python -m pydoc matplotlib.pyplot.stem
+'''
 
