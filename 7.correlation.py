@@ -5,7 +5,7 @@ y(n)=[2,3,−1,3]
 z(n)=[2,−1,4,−2] 
 Find the correlation between x(n) & y(n) and y(n) & z(n). ⟹ observe the 
 realization.
-'''
+''' 
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -60,7 +60,7 @@ plt.grid(True)
 
 
 s = str(r_yz)
-s = 'correlation value: ' +s[:5]
+s = 'correlation value: ' + s[:5]
 
 plt.subplot(2, 1, 2)
 plt.title('Correlation between y(n) and z(n)')
